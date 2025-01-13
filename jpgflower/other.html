@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>jpgflower</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(253, 186, 198);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+
+/* Style the header */
+header {
+  background-color: rgb(253, 186, 198);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 100px;
+  text-align: center;
+  font-size: 35px;
+  color: rgb(141, 80, 111);
+  
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 20%;
+  height: 500px; /* only for demonstration, should be removed */
+  background: rgb(255, 249, 172);
+  padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  padding: 150px;
+  width: 100%;
+  background-image: url('jpf2.svg');
+  background-repeat: repeat-y;
+  background-size: 100% 100%;
+  height: 100%; /* only for demonstration, should be removed */
+  text-align: center;
+}
+
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-image: url('foot.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 280px;
+  text-align: left;
+  color: rgb(236, 172, 248);
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
+</head>
+
+<body ondragstart="return false" onselectstart="return false" oncontextmenu="window.event.returnValue=false;alert('版權所有，侵犯必究！請登入購買支持創作者喔！ლ(╹◡╹ლ)')">
+  <a href="login.html">
+  <img src="cart.png" alt="HTML tutorial" style="float:right;width:80px;height:80px;"></a>
+  <a href="login.html">
+  <img src="login.png" alt="HTML tutorial" style="float:right;width:80px;height:80px;"></a>
+  <a href="mainside.html">
+  <img src="list.png" alt="HTML tutorial" style="float:left;width:80px;height:80px;"></a>
+<header>
+
+<img src="other.png" alt="HTML tutorial" style="opacity:80%;width:240px;height:240px;">
+<h1>Other</h1>  
+
+</header>
+
+<section>
+  
+  <article>
+    <img src="../pictures/other/ad_flag.png" alt="HTML tutorial" style="opacity:50%;float:left;width:240px;height:240px;">
+    <img src="../pictures/other/cloud.png" alt="HTML tutorial" style="opacity:50%;width:240px;height:240px;">
+    <img src="../pictures/other/earth.png" alt="HTML tutorial" style="opacity:50%;float:right;width:240px;height:240px;">
+
+
+    <br><br><br><br><br>
+
+    <img src="../pictures/other/eye.png" alt="HTML tutorial" style="opacity:50%;float:left;width:240px;height:240px;">
+    <img src="../pictures/other/love.png" alt="HTML tutorial" style="opacity:50%;width:240px;height:240px;">
+    <img src="../pictures/other/icecream.png" alt="HTML tutorial" style="opacity:50%;float:right;width:240px;height:240px;">
+
+
+    <br><br><br><br><br>
+
+    <img src="../pictures/other/radio.png" alt="HTML tutorial" style="opacity:50%;float:left;width:240px;height:240px;">
+    <img src="../pictures/other/watershape.png" alt="HTML tutorial" style="opacity:50%;width:240px;height:240px;">
+    <img src="../pictures/other/shape2.png" alt="HTML tutorial" style="opacity:50%;float:right;width:240px;height:240px;">
+
+
+  </article>
+</section>
+
+
+<footer>
+ 
+</footer>
+
+</body>
+</html>

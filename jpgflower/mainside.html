@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>jpgflower</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(253, 186, 198);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+
+/* Style the header */
+header {
+  background-image: url('jpf.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 210px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 10%;
+  height: 150px; /* only for demonstration, should be removed */
+  background: rgb(255, 249, 172,0.5);
+  padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  padding: 150px;
+  width: 100%;
+  background-image: url('jpf2.svg');
+  background-repeat: repeat-y;
+  background-size: 100% 100%;
+  height: 100%; /* only for demonstration, should be removed */
+  text-align: center;
+}
+
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-image: url('foot.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 280px;
+  text-align: left;
+  color: rgb(236, 172, 248);
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+.slider_container {
+  /*margin: 30px auto;*/
+  /*width: 800px;
+  height: 200px;*/
+  overflow: hidden;
+  position: relative;
+  /*border: 10px solid;
+  border-top-color: #856036;
+  border-left-color: #5d4426;
+  border-bottom-color: #856036;
+  border-right-color: #5d4426;
+  background-color: #f5f5f5;*/
+}
+.slider_container:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  opacity: 1;
+  filter: alpha(opacity=100);
+  width: 100%;
+  height: 100%;
+  /*background-image: url(http://blog.shihshih.com/wp-content/uploads/2018/08/image1.png);*/
+  animation: bk 15s linear;
+}
+.slider_container div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  filter: alpha(opacity=100);
+  left: 100%;
+  width: 100%;
+  -webkit-animation: round 15s linear infinite;
+  animation: round 15s linear infinite;
+}
+.slider_container div img {
+  width: 100%;
+}
+@-webkit-keyframes round {
+  7% {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    left: 0;
+    /* 0 - 1秒 滑入*/
+  }
+  21% {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    left: 0;
+    /* 1- 5秒靜止*/
+  }
+  28% {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    left: -100%;
+    /* 5-6秒滑出*/
+  }
+  32% {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    left: -100%;
+    /* 6-6.5秒變透明*/
+  } 
+  35% {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    left: 100%;
+    /* 6.5-7秒回到起始位置*/
+  } 
+}
+@keyframes bk {
+  0% {
+    left: 0;
+    /* 初始位置*/
+  }
+  7% {
+    left: -100%;
+    /* 0 - 1秒 滑出*/
+  }   
+}
+
+@keyframes bk {
+  0% {
+    left: 0;
+    /* 初始位置*/
+  }
+  7% {
+    left: -100%;
+    /* 0 - 1秒 滑出*/
+  }  
+}
+.slider_container div:nth-child(3) {
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+.slider_container div:nth-child(2) {
+  -webkit-animation-delay: 5s;
+  animation-delay: 5s;
+}
+.slider_container div:nth-child(1) {
+  -webkit-animation-delay: 10s;
+  animation-delay: 10s;
+}
+
+.rwd_slider_container_wrapper {
+  /*margin: 30px auto !important;*/
+  width: 950px;
+}
+.rwd_slider_container {
+  position: relative;
+  display: block;
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+  padding-bottom: 40%;
+  box-sizing: border-box;
+}
+.rwd_slider_container .slider_container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  box-sizing: border-box;
+}
+</style>
+</head>
+<body>
+<nav>
+    <ul>
+      <li><a href="month.html">本月精選</a></li>
+      <li><a href="membersale.html">會員優惠</a></li>
+      <li><a href="timelimit.html">限時特賣</a></li>
+    </ul>
+</nav>
+  <a href="login.html">
+  <img src="cart.png" alt="HTML tutorial" style="float:right;width:80px;height:80px;">
+  <a href="login.html">
+  <img src="login.png" alt="HTML tutorial" style="float:right;width:80px;height:80px;">
+  <a href="main.html">
+    <img src="list.png" alt="HTML tutorial" style="float:left;width:80px;height:80px;">
+<header>
+  
+  
+</a>
+</a>
+</header>
+
+<section>
+  
+  <article>
+
+    <center><div class="rwd_slider_container_wrapper">
+      <div class="rwd_slider_container">
+        <div class="slider_container" >
+          <div>
+            <img src="ad1.png" alt="pure css slider" width="950" height="200" />
+          </div>
+          <div>
+            <img src="add2.png" alt="pure css slider" width="950" height="200" />
+          </div>
+          <div>
+            <img src="add3.png" alt="pure css slider" width="950" height="200" />
+          </div>
+        </div><!-- end of .pure_slider_container -->
+      </div><!-- end of .embed-responsive -->
+    </div><!-- end of .embed-responsive-box --></center>
+
+    <a href="month.html">
+    <img src="month.png" alt="HTML tutorial" style="float:left;width:240px;height:160px;"></a>
+    <a href="plant.html">
+    <img src="plant.png" alt="HTML tutorial" style="width:240px;height:160px;"></a>
+    <a href="animal.html">
+    <img src="animal.png" alt="HTML tutorial" style="float:right;width:240px;height:160px;"></a>
+    <br><br>
+    <a href="figure.html">
+    <img src="figure.png" alt="HTML tutorial" style="float:left;width:240px;height:160px;"></a>
+    <a href="building.html">
+    <img src="building.png" alt="HTML tutorial" style="width:240px;height:160px;"></a>
+    <a href="other.html">
+    <img src="other.png" alt="HTML tutorial" style="float:right;width:240px;height:160px;"></a>
+  </article>
+</section>
+
+
+<footer>
+ 
+</footer>
+
+</body>
+</html>
